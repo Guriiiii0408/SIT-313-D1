@@ -34,9 +34,8 @@ function Post() {
 
     // Validate title
     if (!formData.title.trim()) {
-      newErrors.title = "Please enter a title.";
-    }
-
+      newErrors.title = "Please enter a title.";}
+ 
     // Validate question description
     if (
       postType === "question" &&
@@ -336,6 +335,43 @@ function Post() {
             {errors.tags}
           </p>
         )}
+
+
+      {/* Keyword field 
+      <label
+        htmlFor="keyword"
+        className="mb-2 mt-6 block font-medium"
+      >
+        Keywords
+      </label>
+
+      <input
+        id="keyword"
+        name="keyword"
+        type="text"
+        value={formData.keyword}
+        onChange={handleChange}
+        placeholder="React, JavaScript, Web Development"
+        aria-invalid={Boolean(errors.keyword)}
+        aria-describedby={
+          errors.keyword ? "keyword-error" : undefined
+        }
+        className={`w-full rounded-md border px-4 py-3 ${
+          errors.keyword
+            ? "border-red-400"
+            : "border-gray-300"
+        }`}
+      />
+
+      {errors.keyword && (
+        <p
+          id="keyword-error"
+          role="alert"
+          className="mt-2 text-sm text-red-600"
+        >
+          {errors.keyword}
+        </p>
+)}*/}
 
         {/* Post button */}
         <div className="mt-6 flex justify-end">
