@@ -10,6 +10,9 @@ import NewsLetter from "./NewsLetter.jsx";
 import FeaturedArticles from "./FeaturedArticles.jsx";
 import FeaturedTutorial from "./FeaturedTutorial.jsx";
 import Footer from "./Footer.jsx";
+import Pricing from "./pages/Pricing.jsx";
+
+import { AuthProvider } from "./Authorisation.jsx";
 
 import Signup from "./pages/Signup.jsx";
 import Login from "./pages/Login.jsx";
@@ -34,16 +37,19 @@ function Home() {
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+      <AuthProvider>
+        <Navbar />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/post" element={<NewPost />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/post" element={<NewPost />} />
+          <Route path="/pricing" element={<Pricing />} />
+        </Routes>
 
-      <Footer />
+        <Footer />
+      </AuthProvider>
     </BrowserRouter>
   );
 }

@@ -2,53 +2,92 @@
 .navbar {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 12px 24px;
-  background: #fff;
-  border-bottom: 1px solid #ddd;
+  width: 100%;
+  min-height: 64px;
+  padding: 10px 14px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  gap: 14px;
 }
 
-.brand {
-  color: #111;
-  font-weight: 700;
+/* DEV@Deakin brand */
+.navbar-brand {
+  color: #111111;
   text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
   white-space: nowrap;
 }
 
-.nav-search {
+/* Search bar */
+.navbar-search {
   flex: 1;
-  min-width: 80px;
-  padding: 9px 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  min-width: 100px;
+  height: 38px;
+  padding: 8px 12px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
 }
 
-.nav-actions {
+.navbar-search:focus {
+  border-color: #80bdff;
+}
+
+/* Navbar links */
+.navbar-links {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
+  white-space: nowrap;
 }
 
-.nav-actions a {
-  color: #222;
+.navbar-links a {
+  color: #222222;
   text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
 }
 
-.nav-actions button {
-  padding: 8px 14px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  background: #eee;
+.navbar-links a:hover {
+  color: #0d6efd;
 }
 
-@media (max-width: 520px) {
+/* Logged-in user name */
+.navbar-user {
+  color: #222222;
+  font-size: 14px;
+}
+
+/* Logout button */
+.navbar-logout {
+  background-color: #0d6efd;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.navbar-logout:hover {
+  background-color: #0b5ed7;
+}
+
+@media (max-width: 700px) {
   .navbar {
     flex-wrap: wrap;
-    padding: 12px;
+    gap: 10px;
   }
 
-  .nav-search {
-    order: 3;
-    flex-basis: 100%;
+  .navbar-search {
+    flex: 1;
+  }
+
+  .navbar-links {
+    flex-wrap: wrap;
+    gap: 10px;
   }
 }

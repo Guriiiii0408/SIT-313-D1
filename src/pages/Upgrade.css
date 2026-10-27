@@ -1,0 +1,63 @@
+
+.upgrade-page {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.upgrade-card {
+  max-width: 350px;
+  margin: 30px auto;
+  padding: 30px;
+  border: 2px solid #007bff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.upgrade-card h2,
+.upgrade-price {
+  text-align: center;
+}
+
+.upgrade-price {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.upgrade-card li {
+  margin: 12px 0;
+}
+
+.upgrade-card button,
+.upgrade-modal button {
+  padding: 12px 18px;
+  margin: 8px 5px 0 0;
+  border: none;
+  border-radius: 6px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.upgrade-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.upgrade-modal {
+  background: white;
+  width: 100%;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  color: #222;
+}
